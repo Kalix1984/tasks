@@ -18,6 +18,6 @@ public class WordFinder {
 	}
 	
 	public void printResult(String wordToFind, int wordOccurrence) {
-		System.out.printf("%s '%s' %s %d", "A(z)", wordToFind, "szó előfordulása a szövegben", wordOccurrence);
+		System.out.printf("%s \"%s\" %s %d", "A(z)", wordToFind, "szó előfordulása a szövegben", wordOccurrence);
 	}
 }

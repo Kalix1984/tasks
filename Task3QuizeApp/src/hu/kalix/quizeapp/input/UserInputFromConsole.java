@@ -1,4 +1,4 @@
-package hu.kalix.quizeapp;
+package hu.kalix.quizeapp.input;
 
 import java.util.Scanner;
 

@@ -1,6 +1,10 @@
 package hu.kalix.quizeapp;
 
 import java.util.List;
+import hu.kalix.quizeapp.data.QuestionWithOptions;
+import hu.kalix.quizeapp.input.RangeValidator;
+import hu.kalix.quizeapp.input.UserInput;
+import hu.kalix.quizeapp.input.Validator;
 
 public class Quize {
 	private List<QuestionWithOptions> questionsWithOptions;
@@ -18,13 +22,13 @@ public class Quize {
 	}
 
 	public void runQuize() {
-		for (int i = 0; i < questionsWithOptions.size(); i++) {
-			printQuestionWithOptions(i);
+		for (int questionIndex = 0; questionIndex < questionsWithOptions.size(); questionIndex++) {
+			printQuestionWithOptions(questionIndex);
 			
-			int userAnswerId = getUserAnswerAndValidate(i);
+			int userAnswerId = getUserAnswerWithValidation(questionIndex);
 			
-			if (questionsWithOptions.get(i).isAnswearCorrect(userAnswerId)) {
-				numberOfCorrectAnswers++;
+			if (isAnswerCorrect(questionIndex, userAnswerId)) {
+				incrementNumberOfCorrectAnswers();
 			}
 			
 			System.out.println();
@@ -35,7 +39,16 @@ public class Quize {
 		System.out.println("A helyes válaszok száma: " + getNumberOfCorrectAnswers());
 	}
 
-	private int getUserAnswerAndValidate(int index) {
+	private void incrementNumberOfCorrectAnswers() {
+		numberOfCorrectAnswers++;
+	}
+
+	private boolean isAnswerCorrect(int index, int userAnswerId) {
+		return questionsWithOptions.get(index).isAnswearCorrect(userAnswerId);
+	}
+	
+
+	private int getUserAnswerWithValidation(int index) {
 		Validator rangeValidator;
 		int userAnswerId;
 		

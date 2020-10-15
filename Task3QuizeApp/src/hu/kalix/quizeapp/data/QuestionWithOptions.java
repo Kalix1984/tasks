@@ -1,4 +1,4 @@
-package hu.kalix.quizeapp;
+package hu.kalix.quizeapp.data;
 
 import java.util.ArrayList;
 import java.util.List;

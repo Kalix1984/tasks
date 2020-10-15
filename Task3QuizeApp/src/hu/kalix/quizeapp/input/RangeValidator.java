@@ -1,4 +1,4 @@
-package hu.kalix.quizeapp;
+package hu.kalix.quizeapp.input;
 
 public class RangeValidator implements Validator{
 	private int number;

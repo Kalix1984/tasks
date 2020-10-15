@@ -1,11 +1,11 @@
 package hu.kalix.quizeapp.data;
 
-public class Option {
+public class Answer {
 	private int id;
 	private String text;
 	private boolean isCorrect;
 
-	public Option(int id, String text, boolean isCorrect) {
+	public Answer(int id, String text, boolean isCorrect) {
 		this.id = id;
 		this.text = text;
 		this.isCorrect = isCorrect;

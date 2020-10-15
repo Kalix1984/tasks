@@ -1,18 +1,18 @@
 package hu.kalix.quizeapp;
 
 import java.util.List;
-import hu.kalix.quizeapp.data.QuestionWithOptions;
+import hu.kalix.quizeapp.data.QuestionWithAnswers;
 import hu.kalix.quizeapp.input.RangeValidator;
 import hu.kalix.quizeapp.input.UserInput;
 import hu.kalix.quizeapp.input.Validator;
 
 public class Quize {
-	private List<QuestionWithOptions> questionsWithOptions;
+	private List<QuestionWithAnswers> questionsWithAnswers;
 	private UserInput input;
 	private int numberOfCorrectAnswers;
 		
-	public Quize(UserInput input, List<QuestionWithOptions> questionsWithOptions) {
-		this.questionsWithOptions = questionsWithOptions;
+	public Quize(UserInput input, List<QuestionWithAnswers> questionsWithAnswers) {
+		this.questionsWithAnswers = questionsWithAnswers;
 		this.input = input;
 		this.numberOfCorrectAnswers = 0;
 	}
@@ -22,8 +22,8 @@ public class Quize {
 	}
 
 	public void runQuize() {
-		for (int questionIndex = 0; questionIndex < questionsWithOptions.size(); questionIndex++) {
-			printQuestionWithOptions(questionIndex);
+		for (int questionIndex = 0; questionIndex < questionsWithAnswers.size(); questionIndex++) {
+			printQuestionWithAnswers(questionIndex);
 			
 			int userAnswerId = getUserAnswerWithValidation(questionIndex);
 			
@@ -44,7 +44,7 @@ public class Quize {
 	}
 
 	private boolean isAnswerCorrect(int index, int userAnswerId) {
-		return questionsWithOptions.get(index).isAnswearCorrect(userAnswerId);
+		return questionsWithAnswers.get(index).isAnswearCorrect(userAnswerId);
 	}
 	
 
@@ -53,9 +53,9 @@ public class Quize {
 		int userAnswerId;
 		
 		do {
-			userAnswerId = input.getNumber("válasszon: ");
-			int numberOfOptions = questionsWithOptions.get(index).getNumberOfOptions();
-			rangeValidator = new RangeValidator(userAnswerId, 1, numberOfOptions);	
+			userAnswerId = input.getNumber("Kérem a válaszát: ");
+			int numberOfAnswers = questionsWithAnswers.get(index).getNumberOfAnswers();
+			rangeValidator = new RangeValidator(userAnswerId, 1, numberOfAnswers);	
 		
 			if (!rangeValidator.isValid()) {
 				System.out.println("Nem a tartományba eső számot adott meg!");
@@ -64,7 +64,7 @@ public class Quize {
 		return userAnswerId;
 	}
 
-	private void printQuestionWithOptions(int index) {
-		questionsWithOptions.get(index).printQuestionWithOptions(index+1);
+	private void printQuestionWithAnswers(int index) {
+		questionsWithAnswers.get(index).printQuestionWithAnswers(index+1);
 	}
 }

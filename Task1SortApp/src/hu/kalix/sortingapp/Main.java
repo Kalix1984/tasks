@@ -1,4 +1,4 @@
-package hu.kalix.sortapp;
+package hu.kalix.sortingapp;
 
 import java.util.Arrays;
 

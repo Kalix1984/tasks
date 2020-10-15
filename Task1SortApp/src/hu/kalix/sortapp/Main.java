@@ -17,8 +17,8 @@ public class Main {
 		texts[8] = "laptop5";
 		texts[9] = "java";
 
-		System.out.println(Arrays.toString(texts));
+		System.out.println("Eredeti tömb: " + Arrays.toString(texts));
 		Arrays.sort(texts);
-		System.out.println(Arrays.toString(texts));
+		System.out.println("Rendezett tömb: " + Arrays.toString(texts));
 	}
 }

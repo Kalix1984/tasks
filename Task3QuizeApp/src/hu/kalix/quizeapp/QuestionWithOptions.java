@@ -7,7 +7,6 @@ public class QuestionWithOptions {
 	private String question;
 	private List<Option> options;
 	
-	
 	public QuestionWithOptions(String question) {
 		this.question = question;
 		this.options = new ArrayList<>();
@@ -19,10 +18,6 @@ public class QuestionWithOptions {
 
 	public List<Option> getOptions() {
 		return options;
-	}
-
-	public void setQuestion(String question) {
-		this.question = question;
 	}
 
 	public void addOptions(Option option) {
@@ -37,9 +32,9 @@ public class QuestionWithOptions {
 		}
 	}
 	
-	public boolean isAnswearCorrect(int guessId) {
+	public boolean isAnswearCorrect(int userAnswerId) {
 		for (Option option : options) {
-			if (option.getId() == guessId && option.isCorrect()) {
+			if (option.getId() == userAnswerId && option.isCorrect()) {
 				return true;
 			}
 		}
@@ -50,5 +45,4 @@ public class QuestionWithOptions {
 	public int getNumberOfOptions() {
 		return options.size();
 	}
-		
 }

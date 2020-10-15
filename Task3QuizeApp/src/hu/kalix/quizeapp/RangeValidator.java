@@ -1,6 +1,6 @@
 package hu.kalix.quizeapp;
 
-public class RangeValidator implements Validation{
+public class RangeValidator implements Validator{
 	private int number;
 	private int lowerBound;
 	private int upperBound;

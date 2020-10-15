@@ -1,5 +1,5 @@
 package hu.kalix.quizeapp;
 
-public interface Validation {
+public interface Validator {
 	boolean isValid();
 }

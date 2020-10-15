@@ -15,7 +15,7 @@ public class Quize {
 		return numberOfCorrectAnswers;
 	}
 
-	public void runAll(List<QuestionWithOptions> questionsWithOptions) {
+	public void takeQuestions(List<QuestionWithOptions> questionsWithOptions) {
 		for (int i = 0; i < questionsWithOptions.size(); i++) {
 			questionsWithOptions.get(i).printQuestionWithOptions(i+1);
 			
@@ -38,5 +38,9 @@ public class Quize {
 			
 			System.out.println();
 		}
+	}
+	
+	public void printNumberOfCorrectAnswers() {
+		System.out.println("A helyes válaszok száma: " + getNumberOfCorrectAnswers());
 	}
 }

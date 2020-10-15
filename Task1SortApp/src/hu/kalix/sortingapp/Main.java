@@ -2,6 +2,12 @@ package hu.kalix.sortingapp;
 
 import java.util.Arrays;
 
+/***
+ * 
+ * @author Horváth István
+ *
+ */
+
 public class Main {
 	public static void main(String[] args) {
 		String[] texts = new String[10];

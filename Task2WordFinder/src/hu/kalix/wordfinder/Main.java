@@ -2,6 +2,12 @@ package hu.kalix.wordfinder;
 
 import java.io.IOException;
 
+/***
+ * 
+ * @author Horváth István
+ *
+ */
+
 public class Main {
 	public static void main(String[] args) {
 		byte[] textFromFile;

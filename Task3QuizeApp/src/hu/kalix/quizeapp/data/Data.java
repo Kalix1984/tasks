@@ -25,7 +25,8 @@ public class Data {
 		q3.addOptions(new Option(3, "Puhatestű", false));
 		questionsWithOptions.add(q3);
 
-		QuestionWithOptions q4 = new QuestionWithOptions("Egy futó hét napon át napi 10 km-t fut. Mennyit fut egy hét alatt összesen?");
+		QuestionWithOptions q4 = new QuestionWithOptions(
+				"Egy futó hét napon át napi 10 km-t fut. Mennyit fut egy hét alatt összesen?");
 		q4.addOptions(new Option(1, "7000 m", false));
 		q4.addOptions(new Option(2, "70 000 m", true));
 		q4.addOptions(new Option(3, "700 000 m", false));

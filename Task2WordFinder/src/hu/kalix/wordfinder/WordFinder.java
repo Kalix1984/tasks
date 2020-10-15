@@ -1,21 +1,23 @@
 package hu.kalix.wordfinder;
 
 public class WordFinder {
-	public int getWordOccurrence(byte[] textFromFile, String wordToFind) {
-		int occurence = 0;
+	public int countWordOccurrence(byte[] text, String wordToFind) {
+		byte[] wordInBytes = wordToFind.getBytes();
+		int wordOccurranceCounter = 0;
 		
-		int  numberOfChars = textFromFile.length; 
-		
-		String text = new String(textFromFile);
-		
-		System.out.println(text);
-		
-		System.out.println(text.indexOf(wordToFind));
-		
-		return occurence;
+	    for (int i = 0; i < text.length; i++) {
+	        int j = 0;
+	        while (j < wordInBytes.length && text[i + j] == wordInBytes[j]) {
+	            j++;
+	        }
+	        if (j == wordInBytes.length) {
+	        	wordOccurranceCounter++;
+	        }
+	    }
+	    return wordOccurranceCounter;
 	}
 	
 	public void printResult(String wordToFind, int wordOccurrence) {
-		System.out.printf("%s '%s' %s %d", "A(z)", wordToFind, "szó előfordulása a szövegben",  wordOccurrence);
+		System.out.printf("%s '%s' %s %d", "A(z)", wordToFind, "szó előfordulása a szövegben", wordOccurrence);
 	}
 }

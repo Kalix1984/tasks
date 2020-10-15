@@ -1,9 +1,10 @@
-package hu.kalix.quizeapp;
+package hu.kalix.quize;
 
 import java.util.Scanner;
-import hu.kalix.quizeapp.data.Data;
-import hu.kalix.quizeapp.input.UserInput;
-import hu.kalix.quizeapp.input.UserInputFromConsole;
+
+import hu.kalix.quize.data.Data;
+import hu.kalix.quize.input.UserInput;
+import hu.kalix.quize.input.UserInputFromConsole;
 
 /***
  * 

@@ -1,10 +1,11 @@
-package hu.kalix.quizeapp;
+package hu.kalix.quize;
 
 import java.util.List;
-import hu.kalix.quizeapp.data.QuestionWithAnswers;
-import hu.kalix.quizeapp.input.RangeValidator;
-import hu.kalix.quizeapp.input.UserInput;
-import hu.kalix.quizeapp.input.Validator;
+
+import hu.kalix.quize.data.QuestionWithAnswers;
+import hu.kalix.quize.input.RangeValidator;
+import hu.kalix.quize.input.UserInput;
+import hu.kalix.quize.input.Validator;
 
 public class Quize {
 	private List<QuestionWithAnswers> questionsWithAnswers;

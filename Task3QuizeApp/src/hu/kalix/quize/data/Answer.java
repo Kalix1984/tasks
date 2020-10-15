@@ -1,4 +1,4 @@
-package hu.kalix.quizeapp.data;
+package hu.kalix.quize.data;
 
 public class Answer {
 	private int id;
